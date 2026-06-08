@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const participantsMarkup = details.participants.length
           ? `<ul class="participants-list">${details.participants.map((participant) => `\
               <li class="participant-item">\
-                <span>${participant}</span>\
-                <button class="delete-participant" data-activity="${name}" data-email="${participant}" aria-label="Remove ${participant}">&times;</button>\
+                <div class="participant-item-inner">\
+                  <span>${participant}</span>\
+                  <button class="delete-participant" data-activity="${name}" data-email="${participant}" aria-label="Remove ${participant}">&times;</button>\
+                </div>\
               </li>`).join("")}\
             </ul>`
           : '<p class="no-participants">No participants yet.</p>';
